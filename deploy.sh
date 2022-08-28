@@ -8,7 +8,7 @@ yarn build
 rm -rf ../my_BlogDist/public/*
 
 # 将build生成的dist目录拷贝至上一层目录中
-cp -rf /public ../my_BlogDist/
+cp -rf public ../my_BlogDist/
 
 # 进入生成的文件夹
 cd ../my_BlogDist/public
@@ -22,7 +22,7 @@ git branch -M main
 # 如果发布到 https://<USERNAME>.github.io  填写你刚刚创建的仓库地址
 # git remote add origin https://github.com/sanyuan0704/my_blog.git
 
-git push -f origin  git@github.com:Li-WeiXin/Li-WeiXin.github.io.git main
+git push -f origin  git@github.com:Li-WeiXin/Li-WeiXin.github.io.git
 
 cd ..
 

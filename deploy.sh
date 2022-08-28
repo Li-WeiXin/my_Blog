@@ -20,9 +20,7 @@ git commit -m 'deploy try'
 git branch -M main
 
 # 如果发布到 https://<USERNAME>.github.io  填写你刚刚创建的仓库地址
-git remote add origin git@github.com:Li-WeiXin/Li-WeiXin.github.io.git
-
-git push -f origin  git@github.com:Li-WeiXin/Li-WeiXin.github.io.git main
+git push -f git@github.com:Li-WeiXin/Li-WeiXin.github.io.git main
 
 cd ..
 

@@ -22,6 +22,6 @@ git branch -M main
 # 如果发布到 https://<USERNAME>.github.io  填写你刚刚创建的仓库地址
 git push -f git@github.com:Li-WeiXin/Li-WeiXin.github.io.git main
 
-cd ..
+# cd ..
 
-tcb hosting:deploy public -e blog-9g8lgnuke4603ff9
+# tcb hosting:deploy public -e blog-9g8lgnuke4603ff9

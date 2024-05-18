@@ -1,7 +1,7 @@
 {
   "name": "my_blog",
   "version": "1.0.0",
-  "author": "wb",
+  "author": "weixin.li",
   "scripts": {
     "dev": "vuepress dev . --host \"localhost\"",
     "build": "vuepress build .",

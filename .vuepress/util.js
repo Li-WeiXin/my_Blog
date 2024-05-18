@@ -1,18 +1,25 @@
 const fs = require('fs');
 const path = require('path');
+
 const getFile = (prefixPath) => {
-  return fs.readdirSync(path.join(process.cwd(), prefixPath))
-           .map(item => `${prefixPath}/${item.replace('.md', '')}`)
-}
+  const fullPath = path.join(process.cwd(), prefixPath);
+  if (!fs.existsSync(fullPath)) {
+    console.log(`Directory ${fullPath} does not exist.`);
+    return [];
+  }
+  return fs
+    .readdirSync(fullPath)
+    .map((item) => `${prefixPath}/${item.replace('.md', '')}`);
+};
 
 const createSideBarConfig = (title, prefixPath, collapsable = true) => {
-  return  {
+  return {
     title,
     collapsable,
-    children: getFile(prefixPath)
-  }
-}
+    children: getFile(prefixPath),
+  };
+};
 
 module.exports = {
-  createSideBarConfig
-}
+  createSideBarConfig,
+};

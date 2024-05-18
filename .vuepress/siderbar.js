@@ -4,7 +4,7 @@ const CSS_PATH = '/blogs/css'
 const ALGORITHM_PATH = '/blogs/algorithm'
 const GIT_PATH = '/blogs/git'
 const OTHER_PATH = '/blogs/other'
-const PERFORM_PATH = '/blogs/performance/'
+const PERFORM_PATH = '/blogs/performance'
 
 
 module.exports = {

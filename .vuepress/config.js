@@ -9,7 +9,7 @@ module.exports = {
       "link",
       {
         "rel": "icon",
-        "href": "/logo.jpg"
+        "href": "/author.png"
       }
     ],
     [
@@ -82,7 +82,7 @@ module.exports = {
         "link": "https://interview2.poetries.top/"
       },
     ],
-    "logo": "/logo.png",
+    "logo": "/author.png",
     "search": true,
     "searchMaxSuggestions": 10,
     "lastUpdated": "Last Updated",

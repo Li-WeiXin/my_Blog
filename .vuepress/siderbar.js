@@ -5,6 +5,7 @@ const CSS_PATH = '/blogs/css'
 const GIT_PATH = '/blogs/git'
 // const OTHER_PATH = '/blogs/other'
 const PERFORM_PATH = '/blogs/performance'
+const TYPESCRIPT_PATH = '/blogs/typescript'
 
 
 module.exports = {
@@ -14,4 +15,5 @@ module.exports = {
   // [ALGORITHM_PATH]: [createSideBarConfig('算法', ALGORITHM_PATH)],
   [GIT_PATH]: [createSideBarConfig('git', GIT_PATH)],
   // [OTHER_PATH]: [createSideBarConfig('工具', OTHER_PATH)],
+  [TYPESCRIPT_PATH]: [createSideBarConfig('ts专项', TYPESCRIPT_PATH)],
 }

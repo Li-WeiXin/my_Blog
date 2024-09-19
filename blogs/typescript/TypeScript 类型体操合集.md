@@ -1,5 +1,5 @@
 ---
-title: Typescript专项
+title: TypeScript 类型体操合集
 date: 2024-09-18
 categories:
   - typescript

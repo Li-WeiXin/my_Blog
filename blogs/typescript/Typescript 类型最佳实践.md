@@ -1,5 +1,5 @@
 ---
-title: Typescript专项
+title: Typescript 类型最佳实践
 date: 2024-09-18
 categories:
   - typescript
@@ -9,7 +9,6 @@ sidebar: 'auto'
 ---
 
 Ts 中的一些最佳实践沉淀
-
 ### 1.实现对象的可选类型
 
 ```typescript

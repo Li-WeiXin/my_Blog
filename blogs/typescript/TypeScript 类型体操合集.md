@@ -19,3 +19,13 @@ function getValue<T extends Object, K extends keyof T>(o: T, key: K): T[K] {
 }
 const obj1 = { name: '张三', age: 18 };
 const values = getValue(obj1, 'name');
+```
+
+### 2.对象属性只读：(实现 ReadOnly)
+```typescript
+// 在一个对象接口里使用映射类型语法，
+// 遍历T类型的每个键的字面类型，并在前面加上readonly修饰符。
+type MyReadOnly<T> = {
+  readonly [K in keyof T]: T[K]
+}
+```

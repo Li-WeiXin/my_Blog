@@ -1,5 +1,6 @@
 // 1.传入一个泛型函数，可以拿到函数的返回结果
 type Return<T> = T extends (...args: any[]) => infer R ? R : T;
+// type ReturnType<T extends (...args: any) => any> = T extends (...args: any) => infer R ? R : any
 type sum = (a: number, b: number) => number;
 type concat = (a: any[], b: any[]) => any[];
 

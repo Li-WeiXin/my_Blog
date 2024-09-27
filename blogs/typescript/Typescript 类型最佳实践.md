@@ -8,7 +8,9 @@ tags:
 sidebar: 'auto'
 ---
 
-Ts 中的一些最佳实践沉淀
+TS 中的一些最佳实践沉淀
+TS 类型安全，要保证类型始终可用
+
 ### 1.实现对象的可选类型
 
 ```typescript
@@ -52,7 +54,8 @@ personWatcher.on('ageChanged', (oldValue, newValue) => {});
 
 ### 3.对柯里化函数做类型标注
 
-### 4.infer的类型推断
+### 4.infer 的类型推断
+
 ```typescript
 // 1.传入一个泛型函数，可以拿到函数的返回结果
 type Return<T> = T extends (...args: any[]) => infer R ? R : T;
@@ -76,5 +79,27 @@ type ArrayType<T> = T extends (infer I)[] ? I : T;
 
 type ItemType1 = ArrayType<[string, number]>;
 type ItemType2 = ArrayType<string[]>;
+```
+### 5. 前置不定量参数
+```typescript
+// 处理(参数不定量,固定参数)
+// 在一个函数签名里，它参数与参数之间，产生了某种类型关联，应该使用泛型
 
+type JSTypeMap = {
+  number: number;
+  string: string;
+  boolean: boolean;
+};
+
+type JSTypeName = keyof JSTypeMap;
+
+type ArgsType<T extends JSTypeName[]> = {
+  [I in keyof T]: JSTypeMap[T[I]];
+};
+
+declare function addImpl<T extends JSTypeName[]>(
+  ...args: [...T, (...args: ArgsType<T>) => any]
+): void;
+
+addImpl('number', 'string', 'boolean', (a, b, c) => {});
 ```

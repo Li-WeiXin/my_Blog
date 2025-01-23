@@ -5,6 +5,8 @@ const TYPESCRIPT_PATH = '/blogs/typescript';
 const PERFORM_PATH = '/blogs/performance';
 // const ALGORITHM_PATH = '/blogs/algorithm'
 const GIT_PATH = '/blogs/git';
+// 新增前端工程化
+const DESIGN_PATH = '/blogs/design'
 // const OTHER_PATH = '/blogs/other'
 
 module.exports = {
@@ -14,5 +16,6 @@ module.exports = {
   [PERFORM_PATH]: [createSideBarConfig('前端性能相关', PERFORM_PATH)],
   // [ALGORITHM_PATH]: [createSideBarConfig('算法', ALGORITHM_PATH)],
   [GIT_PATH]: [createSideBarConfig('git', GIT_PATH)],
+  [DESIGN_PATH]: [createSideBarConfig('工程化', DESIGN_PATH)],
   // [OTHER_PATH]: [createSideBarConfig('工具', OTHER_PATH)],
 };

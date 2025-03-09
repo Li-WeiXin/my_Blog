@@ -1,0 +1,66 @@
+/**
+ * 参数归一化：把所有的参数情况，全部先归一化为一种情况，后续只需要对这一种情况进行处理
+ * 若函数参数差异过大，可使用函数重载
+ * 函数重载：同一个函数的名字可以被定义多次，只要函数参数的类型或数量不一致即可
+ */
+
+/**
+ * Jquery方案
+ * 缺点：
+ * 1. 不支持参数类型，只支持参数数量
+ * 2. 必须要有对象
+ * 3. 根据行参数量来判断，收到ES6默认参数的影响
+ */
+function addMethod(object, name, fn) {
+  const old = object[name];
+  object[name] = function (...args) {
+    if (args.length === fn.length) {
+      return fn.apply(this, args);
+    } else if (typeof old === "function") {
+      return old.apply(this, args);
+    }
+  };
+}
+
+/**
+ * 优化
+ */
+function creatOverLoad() {
+  const fnMap = new Map();
+  function overload(...args) {
+    const key = args.map((it) => typeof it).join(",");
+    const fn = fnMap.get(key);
+    if (!fn) {
+      throw new TypeError("没有找到对应的实现");
+    }
+    return fn.apply(this, args);
+  }
+
+  overload.addImpl = function (...args) {
+    const fn = args.pop();
+    if (typeof fn !== "function") {
+      throw new TypeError("最后一个参数必须是函数");
+    }
+    const key = args.join(",");
+    fnMap.set(key, fn);
+  };
+
+  return overload;
+}
+
+const getUsers = creatOverLoad();
+
+const serchPage = (page, size = 10) => {
+  console.log("按照页码和数量查询所有用户");
+}
+
+getUsers.addImpl(() => {
+  console.log("查询所有用户");
+});
+
+getUsers.addImpl("number", serchPage);
+
+// 暴露出来的函数使用
+getUsers()
+
+

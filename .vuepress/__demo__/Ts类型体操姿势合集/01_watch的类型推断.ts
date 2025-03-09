@@ -9,16 +9,11 @@ type Watcher<T> = {
 declare function watch<T>(obj: T): Watcher<T>;
 
 const personWatcher = watch({
-  firstName: 'Simon',
-  lastName: 'Roman',
+  firstName: "Simon",
+  lastName: "Roman",
   age: 26,
-  sex: '男',
+  sex: "男",
   level: 2,
 });
 
-personWatcher.on(
-  "ageChanged",
-  (oldValue, newValue) => {
-
-  }
-)
+personWatcher.on("ageChanged", (oldValue, newValue) => {});

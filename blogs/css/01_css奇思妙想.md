@@ -15,4 +15,4 @@ sidebar: 'auto'
 
 2. css 样式顺序的权威指南
    
-![css 样式顺序的权威指南](./css样式顺序的权威指南.png)
+![css 样式顺序的权威指南](../../.vuepress/public/css_guide.png)

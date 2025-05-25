@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      div {
+        width: 25px;
+        height: 25px;
+        background: red;
+        border-radius: 50%;
+        position: relative;
+        box-shadow: 0 0 0 20px white, 0 0 0 40px black, 0 0 0 60px white,
+          0 0 0 80px black, 0 0 0 100px white, 0 0 0 120px black,
+          0 0 0 140px white, 0 0 0 160px black;
+      }
+
+      div::after,
+      div::before {
+        content: "12345678";
+        display: block;
+        width: 1rem;
+        position: absolute;
+        bottom: 22px;
+        left: 20%;
+        word-wrap: break-word;
+        text-align: center;
+        line-height: 20.5px;
+      }
+
+      div::after {
+        color: white;
+        clip-path: polygon(
+          0 2%,
+          100% 2%,
+          100% 12%,
+          0 12%,
+          0 26%,
+          100% 26%,
+          100% 37%,
+          0 37%,
+          0 50%,
+          100% 50%,
+          100% 62%,
+          0 62%,
+          0 75%,
+          100% 75%,
+          100% 86%,
+          0 86%
+        );
+      }
+
+      div::before {
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

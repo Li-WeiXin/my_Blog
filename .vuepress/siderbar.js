@@ -3,7 +3,7 @@ const { createSideBarConfig } = require('./util');
 const JAVASCRIPT_PATH = '/blogs/javascript';
 const TYPESCRIPT_PATH = '/blogs/typescript';
 const PERFORM_PATH = '/blogs/performance';
-// const ALGORITHM_PATH = '/blogs/algorithm'
+const ALGORITHM_PATH = '/blogs/algorithm'
 const GIT_PATH = '/blogs/git';
 // 新增前端工程化
 const DESIGN_PATH = '/blogs/design'
@@ -14,7 +14,7 @@ module.exports = {
   [JAVASCRIPT_PATH]: [createSideBarConfig('js相关', JAVASCRIPT_PATH)],
   [TYPESCRIPT_PATH]: [createSideBarConfig('ts专项', TYPESCRIPT_PATH)],
   [PERFORM_PATH]: [createSideBarConfig('前端性能相关', PERFORM_PATH)],
-  // [ALGORITHM_PATH]: [createSideBarConfig('算法', ALGORITHM_PATH)],
+  [ALGORITHM_PATH]: [createSideBarConfig('算法', ALGORITHM_PATH)],
   [GIT_PATH]: [createSideBarConfig('git', GIT_PATH)],
   [DESIGN_PATH]: [createSideBarConfig('工程化', DESIGN_PATH)],
   // [OTHER_PATH]: [createSideBarConfig('工具', OTHER_PATH)],

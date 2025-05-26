@@ -21,5 +21,14 @@ sidebar: 'auto'
   - 培养软技能，如沟通写协作，协调各角色共同推进目标。
 
 
+## 新技术
+**Webassembly**
+- 了解Webassembly的基本概念和应用场景
+- 学习如何使用Webassembly编写和调用JavaScript函数
+- 了解如何使用Webassembly进行性能优化
+
+**assemblyscript**
+
+
 
 

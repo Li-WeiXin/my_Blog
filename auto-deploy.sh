@@ -14,6 +14,9 @@ echo "开始提交博客更改: $(date)"
 # 确保使用正确的 Node.js 和 yarn
 export PATH="/usr/local/bin:$PATH"
 
+# 添加 GitHub SSH 密钥到 SSH agent
+ssh-add -K ~/.ssh/id_rsa_github
+
 # 添加并提交更改到博客仓库
 git add -A
 git commit -m "Auto commit at $(date)" || echo "没有需要提交的更改"

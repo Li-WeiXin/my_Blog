@@ -35,4 +35,4 @@ jobs:
           external_repository: Li-WeiXin/Li-WeiXin.github.io
           publish_dir: ./public
           publish_branch: main
-          keep_files: false
+          keep_files: true

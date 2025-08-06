@@ -4,7 +4,7 @@
 set -e
 
 # 生成静态文件
-yarn build
+npm run build
 rm -rf ../my_BlogDist/public/*
 
 # 将build生成的dist目录拷贝至上一层目录中

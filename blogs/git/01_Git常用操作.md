@@ -1,5 +1,5 @@
 ---
-title: github的pull request操作
+title: Git常用操作
 date: 2022-08-28
 categories:
  - git

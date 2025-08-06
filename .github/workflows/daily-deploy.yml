@@ -34,5 +34,5 @@ jobs:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
           external_repository: Li-WeiXin/Li-WeiXin.github.io
           publish_dir: ./public
-          publish_branch: master
+          publish_branch: main
           keep_files: false

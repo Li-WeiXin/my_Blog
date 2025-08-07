@@ -5,3 +5,10 @@ Could not open a connection to your authentication agent.
 开始提交博客更改: Thu Aug  7 19:00:01 CST 2025
 Agent pid 38317
 Identity added: /Users/weixin.li/.ssh/id_rsa_github (weixin.li@nio.com)
+[master 8dad705] Auto commit at Thu Aug  7 19:00:01 CST 2025
+ 1 file changed, 3 insertions(+)
+ssh_dispatch_run_fatal: Connection to 20.205.243.166 port 22: Operation timed out
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.

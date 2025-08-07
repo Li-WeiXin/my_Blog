@@ -15,7 +15,15 @@ echo "开始提交博客更改: $(date)"
 export PATH="/usr/local/bin:$PATH"
 
 # 添加 GitHub SSH 密钥到 SSH agent
-ssh-add -K ~/.ssh/id_rsa_github
+# 启动 ssh-agent 并添加 GitHub SSH 密钥
+eval "$(ssh-agent -s)"
+if [ -f ~/.ssh/id_rsa_github ]; then
+    ssh-add ~/.ssh/id_rsa_github
+else
+    echo "警告: 找不到 GitHub SSH 密钥 (~/.ssh/id_rsa_github)"
+    echo "尝试使用默认 SSH 密钥..."
+    ssh-add -l >/dev/null || ssh-add
+fi
 
 # 添加并提交更改到博客仓库
 git add -A
